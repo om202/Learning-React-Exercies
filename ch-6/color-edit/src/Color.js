@@ -1,6 +1,7 @@
 import React from "react";
 import StarRating from "./StarRating";
 import { FaTrash } from "react-icons/fa";
+import "./Color.css";
 
 export default function Color({
   id,
@@ -11,15 +12,13 @@ export default function Color({
   onRateStar,
 }) {
   return (
-    <section>
-      <h1 style={{ "texTransform": "capitalize" }}>{title}</h1>
-      <button
-        style={{ padding: "5px", margin: "5px" }}
-        onClick={() => onRemove(id)}
-      >
-        Delete <FaTrash />
+    <section className="main-color-div">
+      <h1 className="color-title">{title}</h1>
+      <button className="delete" onClick={() => onRemove(id)}>
+        <FaTrash className="delete-icon" /> 
+        Delete
       </button>
-      <div style={{ height: 50, backgroundColor: color }} />
+      <div className="color-div" style={{backgroundColor: color }} />
       <StarRating
         selectedStars={rating}
         onRate={(newRating) => {
