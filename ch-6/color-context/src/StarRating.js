@@ -3,7 +3,7 @@ import Star from "./Star";
 
 const createArray = (length) => [...Array(length)];
 
-export default function StarRating({totalstars=5, selectedStars=0, onRate=f=>f }) {
+export default function StarRating({totalstars=5, selectedStars=0, onRate }) {
   return (
     <div>
       {createArray(totalstars).map((n, i) => (

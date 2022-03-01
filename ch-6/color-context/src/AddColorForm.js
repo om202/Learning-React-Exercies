@@ -1,11 +1,13 @@
 import React from "react";
 import { useInput } from "./hooks";
 import "./AddColorForm.css";
-import {FaPlus} from "react-icons/fa"
+import {FaPlus} from "react-icons/fa";
+import { useColors } from "./ColorProvider";
 
-export default function AddColorForm({ onNewColor }) {
+export default function AddColorForm() {
   const [txtTitle, setTxtTitle] = useInput("");
   const [hexColor, setHexColor] = useInput("#000000");
+  const {addColor} = useColors()
 
   const submit = (e) => {
     e.preventDefault();
@@ -13,13 +15,14 @@ export default function AddColorForm({ onNewColor }) {
     const color = hexColor.value;
 
     if(title!=='') {
-      onNewColor(title, color);
+      addColor(title, color);
       setTxtTitle("");
       setHexColor("");
     } else {
       window.alert("Form cannot be empty")
     }
   };
+
 
   return (
     <div className="add-color-div">
