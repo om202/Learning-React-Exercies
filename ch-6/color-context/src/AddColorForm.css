@@ -1,0 +1,52 @@
+.add-color-div {
+    background-color: lemonchiffon;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.add-color-form {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    font-size: large;
+    margin-bottom: 0.6rem;
+}
+
+.title-input, .color-picker, .color-add {
+    margin-right: 0.6rem;
+}
+
+.title-input {
+    width: 50%;
+    padding: 0.6rem;
+    font-size: 1rem;
+}
+
+.color-add {
+    width: 6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    height: 42px;
+    border: none;
+    background-color: rgb(39, 139, 39);
+}
+
+.color-add:hover {
+    cursor: pointer;
+    background-color: rgb(24, 88, 24);
+}
+
+.color-picker {
+    width: 6rem;
+    border: none;
+    padding: 0;
+    height: 42px;
+}
+
+.form-add-icon {
+    margin-right: 0.6rem;
+}
